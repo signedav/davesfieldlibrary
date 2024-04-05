@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><TRANSFER xmlns="http://www.interlis.ch/INTERLIS2.3">
+<HEADERSECTION SENDER="ili2gpkg-5.0.1-447c03f22b8f346a44ada86c553d10110872fd40" VERSION="2.3"><MODELS><MODEL NAME="DavesLibrary_V1" VERSION="2023-03-14" URI="https://signedav.github.io/usabilitydave/models"></MODEL><MODEL NAME="DavesFieldLibrary_V1" VERSION="2023-03-14" URI="https://signedav.github.io/usabilitydave/models"></MODEL></MODELS></HEADERSECTION>
+<DATASECTION>
+</DATASECTION>
+</TRANSFER>

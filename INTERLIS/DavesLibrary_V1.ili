@@ -1,0 +1,46 @@
+INTERLIS 2.3;
+
+MODEL DavesLibrary_V1 (en)
+AT "https://signedav.github.io/usabilitydave/models"
+VERSION "2023-03-14" =
+
+  TOPIC Books =
+
+    OID AS INTERLIS.UUIDOID;
+
+    CLASS Book  =
+      Title : TEXT;
+      Info : TEXT;
+      Link : TEXT;
+      Read : BOOLEAN;
+    END Book;
+
+    CLASS Autor  =
+      Name : TEXT;
+      Info : TEXT;
+    END Autor;
+
+    ASSOCIATION BookAutor =
+      Book -- {0..*} Book;
+      Autor -- {0..*} Autor;
+    END BookAutor;
+
+  END Books;
+
+END DavesLibrary_V1.
+
+MODEL DavesFieldLibrary_V1 (en)
+AT "https://signedav.github.io/usabilitydave/models"
+VERSION "2023-03-14" =
+  IMPORTS DavesLibrary_V1;
+
+  TOPIC Books EXTENDS DavesLibrary_V1.Books =
+
+    ASSOCIATION BookAutor (EXTENDED) =
+      T_ili_tid_Book : TEXT;
+      T_ili_tid_Autor : TEXT;
+    END BookAutor;
+
+  END Books;
+
+END DavesFieldLibrary_V1.
